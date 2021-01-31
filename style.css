@@ -1,9 +1,17 @@
 /* GENERAL */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 body {
@@ -51,15 +59,8 @@ header ul li {
 
 /* Main */
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 /* FOOTER */
 
-.container-footer {
-  display: flex;
-  justify-content: space-around;
+footer {
+  background-color: #f2f2f2;
 }
