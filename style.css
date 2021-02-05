@@ -1,5 +1,9 @@
 /* GENERAL */
 
+* {
+  font-family: "Raleway", sans-serif;
+}
+
 .container {
   min-height: 100vh;
   margin: 50px;
@@ -21,10 +25,31 @@ li {
 
 a:link {
   text-decoration: none;
+  color: black;
+}
+
+h1,
+h4 {
+  font-weight: bold;
 }
 
 /* HEADER */
 
 /* Main */
 
+.wrapper-hebergements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
 /* FOOTER */
+footer {
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+}
+.column {
+  margin: 50px;
+}
