@@ -1,8 +1,11 @@
 /* GENERAL */
 
-/* HEADER */
-
-/* Main */
+.container {
+  min-height: 100vh;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+}
 
 .blue {
   color: #0065fc;
@@ -11,5 +14,17 @@
 .light {
   color: #deebff;
 }
+
+li {
+  list-style: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+/* Main */
 
 /* FOOTER */
