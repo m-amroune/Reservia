@@ -5,17 +5,21 @@
 }
 
 .container {
-  min-height: 100vh;
-  margin: 50px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  margin: 50px 0 0 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "cta cta"
+    "accommmodation aside"
+    " activities activities";
 }
 
 .blue {
   color: #0065fc;
 }
 
-.light {
+.blue-light {
   color: #deebff;
 }
 
@@ -35,21 +39,87 @@ h4 {
 
 /* HEADER */
 
+header {
+  grid-area: header;
+  margin-bottom: 50px;
+}
+
+h2 {
+  float: left;
+}
+
+nav ul li a {
+  float: right;
+  padding: 15px;
+}
+
+nav li a:hover {
+  color: #0065fc;
+  border-top: 2px solid #0065fc;
+}
+
+.inscription {
+  color: #0065fc;
+  font-weight: 700;
+}
 /* Main */
 
-.wrapper-hebergements {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+/* SEARCH */
+.cta {
+  grid-area: cta;
+}
+
+form {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.search-marker {
+  background-color: #f2f2f2;
+}
+
+.search-button {
+  background-color: #0065fc;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.filters-border {
+  border: 2px solid #f2f2f2;
+}
+
+.accommodation {
+  grid-area: accomodation;
+}
+
+.activities {
+  grid-area: activities;
 }
 
 /* FOOTER */
-footer {
+
+.container-footer {
+  display: flex;
   background-color: #f2f2f2;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
 }
+
 .column {
+  align-items: center;
   margin: 50px;
+}
+.column ul {
+  line-height: 1.6rem;
+}
+
+.column h4 {
+  line-height: 3.4rem;
 }
