@@ -8,17 +8,8 @@
 
 .container {
   font-family: "Raleway", sans-serif;
-  height: 100vh;
   max-width: 1440px;
-  display: grid;
-  grid-template-columns: 67% 33%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "header header"
-    "cta cta"
-    "accommodations aside"
-    "activities activities"
-    "footer footer";
+  margin: 0 auto;
 }
 
 .blue {
@@ -114,10 +105,16 @@ form {
 
 /* SECTION HEBERGEMENTS */
 
+.accommodations-and-populars {
+  display: flex;
+}
+
 .accommodations {
   grid-area: accommodations;
-  margin-left: 40px;
+  width: 70%;
+  margin-right: 30px;
   margin-top: 30px;
+  padding: 20px;
   background-color: var(--gray);
   border-radius: 25px;
   display: flex;
@@ -127,7 +124,6 @@ form {
 .accommodations ul {
   display: flex;
   width: 100%;
-  flex-flow: row nowwrap;
   background-color: var(--gray);
 }
 
@@ -137,14 +133,14 @@ form {
 }
 
 .accommodations ul li.accommodations-frame img {
-  max-width: 100%;
+  height: 120px;
+  width: 100%;
   object-fit: cover;
-  display: flex;
 }
 
 .accommodations-frame {
   height: 120px;
-  display: flex;
+  width: 250px;
 }
 
 /* ASIDE */
@@ -178,7 +174,6 @@ aside {
 }
 
 /* SECTION ACTIVITiES */
-
 .activities {
   grid-area: activities;
   margin-left: 40px;
@@ -190,6 +185,7 @@ aside {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 5%;
+  margin-right: 40px;
   grid-template-areas:
     "item-1 item-2 item-4 item-5"
     "item-1 item-3 item-4 item-6";
