@@ -103,77 +103,90 @@ form {
   border: 2px solid var(--gray);
 }
 
-/* SECTION HEBERGEMENTS */
+/* SECTION HEBERGEMENTS MARSEILLE*/
 
 .accommodations-and-populars {
   display: flex;
 }
 
 .accommodations {
-  grid-area: accommodations;
-  width: 70%;
-  margin-right: 30px;
-  margin-top: 30px;
+  width: 67%;
+  margin: 30px 30px 0px 40px;
   padding: 20px;
   background-color: var(--gray);
   border-radius: 25px;
-  display: flex;
-  flex-flow: row wrap;
 }
 
 .accommodations ul {
   display: flex;
-  width: 100%;
-  background-color: var(--gray);
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
-.accommodations ul li.accommodations-frame {
-  display: flex;
-  width: 320px;
+.accommodations ul li figure {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 4px;
+  text-align: center;
+  line-height: 1.6rem;
 }
 
-.accommodations ul li.accommodations-frame img {
+.accommodations ul li img {
   height: 120px;
-  width: 100%;
+  width: 242px;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .accommodations-frame {
-  height: 120px;
+  height: 220px;
   width: 250px;
 }
 
 /* ASIDE */
 
 aside {
-  grid-area: aside;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--gray);
+  width: 33%;
   margin-right: 40px;
   margin-top: 30px;
+  background-color: var(--gray);
+  padding: 20px;
   border-radius: 25px;
 }
 
-.aside-populars-card figure {
-  height: 140px;
-  background-color: white;
-  border-radius: 25px;
-  display: flex;
-}
-
-.aside-populars-card figure figcaption {
+aside ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.aside-populars-card img {
-  width: 40%;
-  height: 100%;
+aside ul li figure {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 4px;
+  text-align: center;
+  line-height: 1.6rem;
 }
 
-/* SECTION ACTIVITiES */
+aside ul li img {
+  height: 120px;
+  width: 121px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.aside-populars-card {
+  width: 100%;
+  height: 150px;
+}
+
+/* SECTION ACTIVITIES */
 .activities {
   grid-area: activities;
   margin-left: 40px;
