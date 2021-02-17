@@ -35,10 +35,13 @@ h4 {
   font-weight: bold;
 }
 
+strong {
+  font-weight: bold;
+}
+
 /* HEADER */
 
 header {
-  grid-area: header;
   margin: 15px 40px;
 }
 
@@ -69,20 +72,27 @@ nav li a:hover {
 /* Main */
 
 .cta {
-  grid-area: cta;
   margin-left: 40px;
 }
 
 /* SEARCH */
 
 form {
-  margin-top: 15px;
-  margin-bottom: 30px;
-  height: 50px;
+  margin: 15px 0px;
+  display: flex;
+}
+
+form > span,
+input,
+button {
+  padding: 10px;
+  border: var(--gray) solid 1px;
 }
 
 .search-marker {
   background-color: var(--gray);
+  border-radius: 10px 0 0 10px;
+  display: flex;
 }
 
 .search-button {
@@ -101,6 +111,8 @@ form {
 
 .filters-border {
   border: 2px solid var(--gray);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 /* SECTION HEBERGEMENTS MARSEILLE*/
@@ -188,7 +200,6 @@ aside ul li img {
 
 /* SECTION ACTIVITIES */
 .activities {
-  grid-area: activities;
   margin-left: 40px;
   margin-top: 40px;
 }
@@ -206,11 +217,11 @@ aside ul li img {
 
 .activities-card figure img {
   width: 100%;
-  height: 75%;
+  height: 350px;
 }
 
 .activities-half-card img {
-  height: 30vh;
+  height: 150px;
   width: 100%;
 }
 
@@ -239,10 +250,6 @@ aside ul li img {
 }
 
 /* FOOTER */
-
-footer {
-  grid-area: footer;
-}
 
 .mini-container {
   display: flex;
