@@ -35,6 +35,10 @@ h4 {
   font-weight: bold;
 }
 
+h1 {
+  margin-bottom: 15px;
+}
+
 strong {
   font-weight: bold;
 }
@@ -42,7 +46,7 @@ strong {
 /* HEADER */
 
 header {
-  margin: 15px 40px;
+  margin: 20px 40px 50px 40px;
 }
 
 header nav ul {
@@ -78,7 +82,9 @@ nav li a:hover {
 /* SEARCH */
 
 form {
-  margin: 15px 0px;
+  margin: 25px 0px;
+  height: 50px;
+  width: 420px;
   display: flex;
 }
 
@@ -107,21 +113,24 @@ button {
 
 .filters {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+  margin-top: 35px;
   font-weight: 700;
 }
 
 .filters-border {
   border: 2px solid var(--gray);
   padding: 5px;
-  margin-right: 20px;
+  width: 176px;
+  height: 36px;
+  margin-right: 25px;
   border-radius: 50px;
 }
 
 .filters-border i {
   border: 2px solid var(--gray);
   background-color: var(--blue-light);
-  padding: 10px;
+  padding: 16px;
   border-radius: 50px;
   margin: -8px;
   margin-right: 2px;
@@ -131,8 +140,24 @@ button {
   color: var(--blue);
 }
 
+.economique {
+  width: 176px;
+}
+
+.familial {
+  width: 126px;
+}
+
+.romantique {
+  width: 171px;
+}
+
+.animaux {
+  width: 226px;
+}
+
 .filters h4 {
-  padding: 11px;
+  padding: 17px 35px 17px 0px;
 }
 /* SECTION HEBERGEMENTS MARSEILLE*/
 
@@ -142,7 +167,7 @@ button {
 
 .accommodations {
   width: 67%;
-  margin: 30px 30px 0px 40px;
+  margin: 40px 30px 40px 40px;
   padding: 20px;
   background-color: var(--gray);
   border-radius: 25px;
@@ -164,8 +189,8 @@ button {
 }
 
 .accommodations ul li img {
-  height: 120px;
-  width: 242px;
+  height: 114px;
+  width: 238px;
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -180,8 +205,7 @@ button {
 
 aside {
   width: 33%;
-  margin-right: 40px;
-  margin-top: 30px;
+  margin: 40px 40px 40px 0px;
   background-color: var(--gray);
   padding: 20px;
   border-radius: 25px;
@@ -204,8 +228,8 @@ aside ul li figure {
 }
 
 aside ul li img {
-  height: 120px;
-  width: 121px;
+  height: 134px;
+  width: 126px;
   margin-right: 20px;
   object-fit: cover;
   border-top-left-radius: 8px;
@@ -218,73 +242,74 @@ aside ul li img {
 }
 
 /* SECTION ACTIVITIES */
-.activities {
+
+#activities {
   margin-left: 40px;
-  margin-top: 40px;
 }
 
-.activities-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 5%;
-  grid-row-gap: 5%;
-  margin-right: 40px;
-  grid-template-areas:
-    "item-1 item-2 item-4 item-5"
-    "item-1 item-3 item-4 item-6";
+.activities {
+  display: flex;
+  margin-top: 30px;
+}
+
+.activities ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.two-cards {
+  display: flex;
+  flex-direction: column;
 }
 
 .activities-card {
-  border: 1px solid var(--gray);
-  border-radius: 25px;
+  display: flex;
 }
 
-.activities-half-card {
-  border: 1px solid var(--gray);
-  border-radius: 25px;
+.activities ul li figure {
+  border: 2px solid var(--gray);
+  object-fit: cover;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
-.activities h3 {
-  padding: 10px;
+.activities ul li figure figcaption {
+  height: 55px;
 }
 
-.activities-card figure img {
-  width: 100%;
-  height: 350px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+.activities ul li figure figcaption h3 {
+  padding: 22px 0px 20px 20px;
 }
 
-.activities-half-card img {
-  height: 150px;
-  width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+.activities ul li figure .item-1 {
+  height: 390px;
+  width: 305px;
 }
 
-.item-1 {
-  grid-area: item-1;
+.activities ul li figure .item-2 {
+  height: 180px;
+  width: 305px;
 }
 
-.item-2 {
-  grid-area: item-2;
+.activities ul li figure .item-3 {
+  height: 110px;
+  width: 305px;
 }
 
-.item-3 {
-  grid-area: item-3;
+.activities ul li figure .item-4 {
+  height: 390px;
+  width: 305px;
 }
 
-.item-4 {
-  grid-area: item-4;
+.activities ul li figure .item-5 {
+  height: 140px;
+  width: 305px;
 }
 
-.item-5 {
-  grid-area: item-5;
-}
-
-.item-6 {
-  grid-area: item-6;
+.activities ul li figure .item-6 {
+  height: 155px;
+  width: 305px;
 }
 
 /* FOOTER */
@@ -293,7 +318,8 @@ aside ul li img {
   display: flex;
   background-color: var(--gray);
   max-width: 1440px;
-  margin-top: 40px;
+  margin-top: 60px;
+  height: 220px;
 }
 
 .column {
