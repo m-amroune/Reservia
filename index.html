@@ -14,7 +14,9 @@
 </head>
 
 <body>
+
     <!-- HEADER -->
+
     <div class="container">
         <header>
             <nav>
@@ -24,8 +26,8 @@
                             <img class="logo" src="images/logo/Reservia.svg" alt="logo Reservia">
                         </a>
                     </li>
-                    <li><a href="#accommodations">Hébergements</a></li>
-                    <li><a href="#activities">Activités</a></li>
+                    <li class="navigation-accommodations"><a href="#accommodations">Hébergements</a></li>
+                    <li class="navigation-activities"><a href="#activities">Activités</a></li>
                     <li><a class="inscription" href="#">S'inscrire</a> </li>
                 </ul>
             </nav>
@@ -36,43 +38,51 @@
         <main>
             <section class="cta">
                 <h1>Trouvez votre hébergement pour des vacances de rêve </h1>
-                <p>En plein centre ville ou pleine nature</p>
+                <p>En plein centre ville ou en pleine nature</p>
 
                 <!-- SEARCH -->
 
                 <form class="search" action="">
                     <span class="search-marker"><i class="fas fa-map-marker-alt"></i></span>
                     <input type="text" placeholder="Marseille, France">
-                    <button class="search-button">Rechercher</button>
+                    <button class="search-button">
+                        <span>Rechercher</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+
                 </form>
 
                 <!-- FILTERS-->
 
 
                 <ul class="filters">
-                    <h4>Filtres</h4>
-                    <li class="filters-border economique">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <a href="#"><strong>Économique</strong></a>
-                    </li>
-                    <li class="filters-border familial">
-                        <i class="fas fa-child"></i>
-                        <a href="#"><strong>Familial</strong> </a>
-                    </li>
-                    <li class="filters-border romantique">
-                        <i class="fas fa-heart"></i>
-                        <a href="#"><strong>Romantique</strong> </a>
-                    </li>
-                    <li class="filters-border animaux">
-                        <i class="fas fa-dog"></i>
-                        <a href="#"><strong>Animaux autorisés</strong> </a>
-                    </li>
-                </ul <p> <i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                    <h4 class="filters">Filtres</h4>
+                    <div class="filters">
+                        <li class=" filters-border economique">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <a href="#"><strong>Économique</strong></a>
+                        </li>
+                        <li class="filters-border familial">
+                            <i class="fas fa-child"></i>
+                            <a href="#"><strong>Familial</strong> </a>
+                        </li>
+                        <li class=" filters-border romantique">
+                            <i class="fas fa-heart"></i>
+                            <a href="#"><strong>Romantique</strong> </a>
+                        </li>
+                        <li class="filters-border animaux">
+                            <i class="fas fa-dog"></i>
+                            <a href="#"><strong>Animaux autorisés</strong> </a>
+                        </li>
+                    </div>
+                </ul>
+                <p><i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette
+                    ville</span></p>
             </section>
 
             <div class="accommodations-and-populars">
                 <section class="accommodations" id="accommodations">
-                    <h3>Hébergements à Marseille</h3>
+                    <h3 class="titles-accommodations-and-populars">Hébergements à Marseille</h3>
                     <ul>
                         <li class="accommodations-frame"> <a href="#">
                                 <figure>
@@ -191,11 +201,12 @@
                             </a>
                         </li>
                     </ul>
-                    <h3>Afficher plus</h3>
+                    <h3 class="afficher-plus">Afficher plus</h3>
                 </section>
 
                 <aside>
-                    <h3>Les plus populaires <span class="search-marker"><i class="fas fa-chart-line"></i></span></h3>
+                    <h3 class="titles-accommodations-and-populars">Les plus populaires <span class="search-marker"><i
+                                class="fas fa-chart-line"></i></span></h3>
                     <ul>
                         <li class="aside-populars-card">
                             <a href="#">
@@ -203,9 +214,10 @@
                                     <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
                                         alt="photo Hotel-Le-soleil-du-matin">
                                     <figcaption>
-                                        <h3>Hôtel Le soleil du matin</h3>
+                                        <h3>Hôtel Le soleil du <br> matin
+                                        </h3>
                                         <p>Nuit à partir de <strong>128€</strong> </p>
-                                        <div>
+                                        <div class="stars-aside">
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
@@ -224,7 +236,7 @@
                                     <figcaption>
                                         <h3>Au coeur de l'eau <br>Chambres d'hôtes</h3>
                                         <p>Nuit à partir de <strong>71€</strong> </p>
-                                        <div>
+                                        <div class="stars-aside">
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
@@ -243,7 +255,7 @@
                                     <figcaption>
                                         <h3>Hôtel Tout bleu et Blanc</h3>
                                         <p>Nuit à partir de <strong>68€</strong> </p>
-                                        <div>
+                                        <div class="stars-aside">
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
                                             <i class="fas fa-star blue"></i>
@@ -343,34 +355,33 @@
                 </div>
             </section>
         </main>
+
         <!-- FOOTER  -->
 
         <footer>
-            <div class="mini-container">
-                <div class="column">
-                    <h4>A propos</h4>
-                    <ul>
-                        <li><a href="#">Fonctionnement du site</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Données et confidentialité</a></li>
-                    </ul>
-                </div>
+            <div class="column">
+                <h4>A propos</h4>
+                <ul>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions générales de vente</a></li>
+                    <li><a href="#">Données et confidentialité</a></li>
+                </ul>
+            </div>
 
-                <div class="column">
-                    <h4>Nos hébergements</h4>
-                    <ul>
-                        <li><a href="#">Charte qualité</a> </li>
-                        <li><a href="#">Soumettre votre hôtel</a> </li>
-                    </ul>
-                </div>
+            <div class="column">
+                <h4>Nos hébergements</h4>
+                <ul>
+                    <li><a href="#">Charte qualité</a> </li>
+                    <li><a href="#">Soumettre votre hôtel</a> </li>
+                </ul>
+            </div>
 
-                <div class="column">
-                    <h4>Assistance</h4>
-                    <ul>
-                        <li><a href="#">Centre d'aide</a> </li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
+            <div class="column">
+                <h4>Assistance</h4>
+                <ul>
+                    <li><a href="#">Centre d'aide</a> </li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
             </div>
         </footer>
     </div>

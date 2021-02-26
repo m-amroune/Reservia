@@ -27,6 +27,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 h1,
@@ -37,6 +38,7 @@ h4 {
 
 h1 {
   margin-bottom: 15px;
+  font-size: 1.4rem;
 }
 
 strong {
@@ -68,8 +70,15 @@ header nav ul li {
   margin-left: 30px;
 }
 
-nav li a:hover {
+.navigation-accommodations {
   color: var(--blue);
+  padding: 30px 0;
+  border-top: 2px solid var(--blue);
+}
+
+.navigation-activities:hover {
+  color: var(--blue);
+  padding: 30px 0px;
   border-top: 2px solid var(--blue);
 }
 
@@ -117,12 +126,16 @@ button {
   border-bottom-right-radius: 10px;
 }
 
+.fas.fa-search {
+  display: none;
+}
+
 /* FILTERS */
 
 .filters {
   display: flex;
-  margin-bottom: 40px;
-  margin-top: 35px;
+  margin-bottom: 10px;
+  margin-top: 2px;
   font-weight: 700;
 }
 
@@ -135,6 +148,10 @@ button {
   border-radius: 50px;
 }
 
+.filters-border:hover {
+  transform: scale(1.1);
+}
+
 .filters-border i {
   border: 2px solid var(--gray);
   background-color: var(--blue-light);
@@ -142,14 +159,11 @@ button {
   border-radius: 50px;
   margin: -8px;
   margin-right: 2px;
-}
-
-.filters-border i {
   color: var(--blue);
 }
 
 .economique {
-  width: 176px;
+  width: 190px;
 }
 
 .familial {
@@ -161,7 +175,7 @@ button {
 }
 
 .animaux {
-  width: 226px;
+  width: 240px;
 }
 
 .filters h4 {
@@ -175,10 +189,23 @@ button {
   padding: 2px 5px;
   margin-right: 12px;
 }
-/* SECTION HEBERGEMENTS MARSEILLE*/
+
+/* ACCOMMODATIONS MARSEILLE */
 
 .accommodations-and-populars {
   display: flex;
+}
+
+.titles-accommodations-and-populars {
+  margin: 25px 0px 30px 0px;
+}
+
+.afficher-plus {
+  margin: 25px 0px;
+}
+
+figcaption p {
+  font-size: 0.9rem;
 }
 
 .accommodations {
@@ -200,8 +227,8 @@ button {
   border-radius: 8px;
   overflow: hidden;
   padding: 4px;
-  text-align: center;
   line-height: 1.6rem;
+  box-shadow: 0 0 10px #c1c1c1;
 }
 
 .accommodations ul li img {
@@ -216,6 +243,14 @@ button {
   height: 200px;
   width: 250px;
   margin-bottom: 30px;
+}
+
+.accommodations-frame:hover {
+  transform: scale(1.1);
+}
+
+figcaption {
+  margin-left: 16px;
 }
 
 /* ASIDE */
@@ -245,14 +280,16 @@ aside ul li figure {
   border-radius: 8px;
   overflow: hidden;
   padding: 4px;
-  text-align: center;
   line-height: 1.6rem;
+  width: 405px;
+  height: 145px;
+  box-shadow: 0 0 10px #c1c1c1;
+  width: 100%;
 }
 
 aside ul li img {
   height: 134px;
   width: 126px;
-  margin-right: 20px;
   object-fit: cover;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -264,21 +301,29 @@ aside ul li img {
   margin-bottom: 30px;
 }
 
-/* SECTION ACTIVITIES */
-
-#activities {
-  margin-left: 40px;
+.aside-populars-card:hover {
+  transform: scale(1.1);
 }
+
+.stars-aside {
+  margin-top: 20px;
+}
+/*  ACTIVITIES MARSEILLE */
 
 .activities {
   display: flex;
   margin-top: 30px;
 }
 
+#activities {
+  margin-left: 40px;
+}
+
 .activities ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-right: 45px;
 }
 
 .two-cards {
@@ -290,11 +335,13 @@ aside ul li img {
   display: flex;
 }
 
+.activities-card:hover {
+  transform: scale(1.1);
+}
+
 .activities ul li figure {
-  border: 2px solid var(--gray);
-  object-fit: cover;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px var(--gray);
 }
 
 .activities ul li figure figcaption {
@@ -308,45 +355,62 @@ aside ul li img {
 .activities ul li figure .item-1 {
   height: 390px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 .activities ul li figure .item-2 {
   height: 180px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 .activities ul li figure .item-3 {
   height: 110px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 .activities ul li figure .item-4 {
   height: 390px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 .activities ul li figure .item-5 {
   height: 140px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 .activities ul li figure .item-6 {
   height: 155px;
   width: 305px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  object-fit: cover;
 }
 
 /* FOOTER */
 
-.mini-container {
+footer {
   display: flex;
   background-color: var(--gray);
-  max-width: 1440px;
   margin-top: 60px;
   height: 220px;
+  width: 100%;
 }
 
 .column {
-  align-items: center;
   margin: 50px;
   width: 30%;
 }
@@ -358,15 +422,96 @@ aside ul li img {
   line-height: 3.4rem;
 }
 
-/* RESPONSIVE MOBILE */
+/***** RESPONSIVE MOBILE *****/
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (max-width: 520px) {
+  .container {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* HEADER - MOBILE */
+
+  /* SEARCH - MOBILE */
+  .search-button span {
+    display: none;
+  }
+
+  .search-button {
+    border-radius: 15px;
+    margin-left: -20px;
+    padding: 17px;
+  }
+
+  .fas.fa-search {
+    display: inline-block;
+  }
+
+  /* FILTERS - MOBILE */
+
+  .filters {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    width: 100%;
+  }
+
+  .filters-border {
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+
+  .fas.fa-info {
+    margin-top: 40px;
+  }
+
+  /* ACCOMMODATIONS MARSEILLE - MOBILE */
   .accommodations-and-populars {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .accommodations {
+    background-color: white;
+    width: 100%;
+  }
+
+  /* ASIDE - MOBILE */
+
+  aside {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  /*  ACTIVITIES MARSEILLE - MOBILE*/
+  .activities {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .activities li {
+    padding-top: 20px;
+  }
+  /* FOOTER - MOBILE */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .column {
+    margin-left: 30px;
+    flex-flow: column nowrap;
   }
 }
 
-/* RESPONSIVE TABLETTE */
+/***** RESPONSIVE TABLETTE *****/
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 521px) and (max-width: 860px) {
 }
