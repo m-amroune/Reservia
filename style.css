@@ -10,6 +10,7 @@
   font-family: "Raleway", sans-serif;
   max-width: 1440px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .blue {
@@ -53,38 +54,49 @@ input::placeholder {
 /* HEADER */
 
 header {
-  margin: 20px 40px 50px 40px;
+  display: grid;
+  align-items: center;
+  margin: auto;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "logo . nav inscription";
 }
 
-header nav ul {
+.logo {
+  grid-area: logo;
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+nav {
   display: flex;
   align-items: center;
+  grid-area: nav;
 }
 
-header nav ul li:first-child {
-  margin-right: auto;
-  margin-left: 0;
+.navigation {
+  padding: 50px;
+  font-weight: 500;
+  border-top: 3px transparent solid;
+  border-bottom: 3px transparent solid;
 }
 
-header nav ul li {
-  margin-left: 30px;
-}
-
-.navigation-accommodations {
+.nav-accommodations {
   color: var(--blue);
-  padding: 30px 0;
-  border-top: 2px solid var(--blue);
+  border-top: 3px solid var(--blue);
 }
 
-.navigation-activities:hover {
+.navigation:hover {
   color: var(--blue);
-  padding: 30px 0px;
-  border-top: 2px solid var(--blue);
+  border-top: 3px solid var(--blue);
 }
 
 .inscription {
+  display: flex;
+  align-items: center;
+  grid-area: inscription;
+  padding: 50px;
   color: var(--blue);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Main */
@@ -142,8 +154,6 @@ button {
 .filters-border {
   border: 2px solid var(--gray);
   padding: 5px;
-  width: 176px;
-  height: 36px;
   margin-right: 25px;
   border-radius: 50px;
 }
@@ -182,11 +192,16 @@ button {
   padding: 17px 35px 17px 0px;
 }
 
+.search-result {
+  display: flex;
+  align-items: center;
+}
+
 .fas.fa-info {
   color: var(--blue);
   border: 2px solid var(--gray);
   border-radius: 100%;
-  padding: 2px 5px;
+  padding: 5px 5px;
   margin-right: 12px;
 }
 
@@ -210,6 +225,7 @@ figcaption p {
 
 .accommodations {
   width: 67%;
+  min-height: 625px;
   margin: 40px 30px 40px 40px;
   padding: 20px;
   background-color: var(--gray);
@@ -225,7 +241,6 @@ figcaption p {
 .accommodations ul li figure {
   background: white;
   border-radius: 8px;
-  overflow: hidden;
   padding: 4px;
   line-height: 1.6rem;
   box-shadow: 0 0 10px #c1c1c1;
@@ -233,7 +248,7 @@ figcaption p {
 
 .accommodations ul li img {
   height: 114px;
-  width: 238px;
+  min-width: 238px;
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -257,6 +272,9 @@ figcaption {
 
 aside {
   width: 33%;
+  display: flex;
+  flex-direction: column;
+  min-height: 625px;
   margin: 40px 40px 40px 0px;
   background-color: var(--gray);
   padding: 20px;
@@ -266,6 +284,7 @@ aside {
 aside h3 {
   display: flex;
   justify-content: space-between;
+  margin-right: 40px;
 }
 
 aside ul {
@@ -276,19 +295,22 @@ aside ul {
 
 aside ul li figure {
   display: flex;
+  height: 145px;
+  width: 100%;
   background-color: white;
   border-radius: 8px;
-  overflow: hidden;
   padding: 4px;
   line-height: 1.6rem;
-  width: 405px;
-  height: 145px;
   box-shadow: 0 0 10px #c1c1c1;
-  width: 100%;
+}
+
+aside ul li figure figcaption {
+  display: flex;
+  flex-direction: column;
 }
 
 aside ul li img {
-  height: 134px;
+  min-height: 134px;
   width: 126px;
   object-fit: cover;
   border-top-left-radius: 8px;
@@ -296,8 +318,6 @@ aside ul li img {
 }
 
 .aside-populars-card {
-  width: 100%;
-  height: 145px;
   margin-bottom: 30px;
 }
 
@@ -306,8 +326,9 @@ aside ul li img {
 }
 
 .stars-aside {
-  margin-top: 20px;
+  padding-top: 30px;
 }
+
 /*  ACTIVITIES MARSEILLE */
 
 .activities {
@@ -322,7 +343,6 @@ aside ul li img {
 .activities ul {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   padding-right: 45px;
 }
 
@@ -354,7 +374,7 @@ aside ul li img {
 
 .activities ul li figure .item-1 {
   height: 390px;
-  width: 305px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
@@ -362,7 +382,7 @@ aside ul li img {
 
 .activities ul li figure .item-2 {
   height: 180px;
-  width: 305px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
@@ -370,7 +390,7 @@ aside ul li img {
 
 .activities ul li figure .item-3 {
   height: 110px;
-  width: 305px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
@@ -378,15 +398,15 @@ aside ul li img {
 
 .activities ul li figure .item-4 {
   height: 390px;
-  width: 305px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-5 {
-  height: 140px;
-  width: 305px;
+  height: 155px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
@@ -394,7 +414,7 @@ aside ul li img {
 
 .activities ul li figure .item-6 {
   height: 155px;
-  width: 305px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   object-fit: cover;
@@ -406,7 +426,7 @@ footer {
   display: flex;
   background-color: var(--gray);
   margin-top: 60px;
-  height: 220px;
+  min-height: 220px;
   width: 100%;
 }
 
@@ -419,21 +439,31 @@ footer {
 }
 
 .column h4 {
-  line-height: 3.4rem;
+  padding-bottom: 0.8rem;
 }
 
 /***** RESPONSIVE MOBILE *****/
 
 @media only screen and (max-width: 520px) {
-  .container {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  /* HEADER - MOBILE */
+  header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo . inscription"
+      "nav nav nav";
   }
 
-  /* HEADER - MOBILE */
+  .navigation {
+    padding: 20px;
+    border-top: none;
+    border-bottom: 3px solid var(--gray);
+    width: 50%;
+  }
+
+  .navigation:hover {
+    border-top: none;
+    border-bottom: 3px solid var(--blue);
+  }
 
   /* SEARCH - MOBILE */
   .search-button span {
@@ -455,8 +485,7 @@ footer {
   .filters {
     display: flex;
     flex-flow: row wrap;
-    margin: 0;
-    width: 100%;
+    margin-bottom: -10px;
   }
 
   .filters-border {
@@ -468,6 +497,15 @@ footer {
     margin-top: 40px;
   }
 
+  .search-result {
+    margin-top: -20px;
+  }
+
+  .text-search-result {
+    padding-top: 60px;
+    line-height: 1.4rem;
+  }
+
   /* ACCOMMODATIONS MARSEILLE - MOBILE */
   .accommodations-and-populars {
     display: flex;
@@ -476,7 +514,6 @@ footer {
 
   .accommodations {
     background-color: white;
-    width: 100%;
   }
 
   /* ASIDE - MOBILE */
@@ -484,7 +521,7 @@ footer {
   aside {
     width: 100%;
     border-radius: 0;
-    padding: 20px;
+    flex-direction: column;
   }
 
   /*  ACTIVITIES MARSEILLE - MOBILE*/
@@ -496,22 +533,58 @@ footer {
   .activities li {
     padding-top: 20px;
   }
+
+  .activities ul li figure {
+    text-align: left;
+  }
+
+  .activities ul li figure .item-1 {
+    width: 100;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-2 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-3 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-4 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-5 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-6 {
+    width: 100%;
+    height: 190px;
+  }
   /* FOOTER - MOBILE */
 
   footer {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+    flex-flow: column;
   }
 
   .column {
-    margin-left: 30px;
-    flex-flow: column nowrap;
+    margin: 50px 0 0px 30px;
+    width: 100%;
   }
 }
 
+.column-3 {
+  margin-bottom: 50px;
+}
 /***** RESPONSIVE TABLETTE *****/
 
-@media only screen and (min-width: 521px) and (max-width: 860px) {
+@media only screen and (min-width: 521px) and (max-width: 950px) {
+  /* ACTIVITIES MARSEILLE - TABLETTE */
 }
