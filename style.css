@@ -64,7 +64,7 @@ header {
 .logo {
   grid-area: logo;
   margin-right: auto;
-  margin-left: 40px;
+  padding: 0 40px;
 }
 
 nav {
@@ -76,6 +76,7 @@ nav {
 .navigation {
   padding: 50px;
   font-weight: 500;
+  text-align: center;
   border-top: 3px transparent solid;
   border-bottom: 3px transparent solid;
 }
@@ -244,6 +245,7 @@ figcaption p {
   padding: 4px;
   line-height: 1.6rem;
   box-shadow: 0 0 10px #c1c1c1;
+  box-sizing: border-box;
 }
 
 .accommodations ul li img {
@@ -256,7 +258,7 @@ figcaption p {
 
 .accommodations-frame {
   height: 200px;
-  width: 250px;
+  min-width: 250px;
   margin-bottom: 30px;
 }
 
@@ -442,15 +444,17 @@ footer {
   padding-bottom: 0.8rem;
 }
 
-/***** RESPONSIVE MOBILE *****/
+/****************** RESPONSIVE MOBILE *******************/
 
 @media only screen and (max-width: 520px) {
   /* HEADER - MOBILE */
   header {
     grid-template-columns: auto 1fr auto;
+    align-items: center;
     grid-template-areas:
       "logo . inscription"
       "nav nav nav";
+    padding-bottom: 35px;
   }
 
   .navigation {
@@ -466,6 +470,11 @@ footer {
   }
 
   /* SEARCH - MOBILE */
+
+  form {
+    max-width: 100%;
+  }
+
   .search-button span {
     display: none;
   }
@@ -474,6 +483,10 @@ footer {
     border-radius: 15px;
     margin-left: -20px;
     padding: 17px;
+  }
+
+  input {
+    width: 100%;
   }
 
   .fas.fa-search {
@@ -514,6 +527,13 @@ footer {
 
   .accommodations {
     background-color: white;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .accommodations ul li figure {
+    margin: auto;
+    width: 100%;
   }
 
   /* ASIDE - MOBILE */
@@ -522,6 +542,11 @@ footer {
     width: 100%;
     border-radius: 0;
     flex-direction: column;
+  }
+  aside ul {
+    margin: auto;
+    display: flex;
+    align-items: center;
   }
 
   /*  ACTIVITIES MARSEILLE - MOBILE*/
@@ -539,7 +564,7 @@ footer {
   }
 
   .activities ul li figure .item-1 {
-    width: 100;
+    width: 100%;
     height: 190px;
   }
 
@@ -583,8 +608,104 @@ footer {
 .column-3 {
   margin-bottom: 50px;
 }
-/***** RESPONSIVE TABLETTE *****/
+/****************** RESPONSIVE TABLETTE ******************/
 
-@media only screen and (min-width: 521px) and (max-width: 950px) {
+@media only screen and (min-width: 521px) and (max-width: 1000px) {
+  /* FILTERS - TABLETTE */
+
+  .filters {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: -10px;
+  }
+
+  .filters-border {
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+
+  .fas.fa-info {
+    margin-top: 40px;
+  }
+
+  .search-result {
+    margin-top: -20px;
+  }
+
+  .text-search-result {
+    padding-top: 60px;
+    line-height: 1.4rem;
+  }
+
+  .fas.fa-info {
+    margin-top: 60px;
+  }
+
+  /* ACCOMMODATIONS MARSEILLE - TABLETTE */
+  .accommodations-and-populars {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .accommodations {
+    margin: 40px auto;
+    width: 100%;
+  }
+
+  /* ASIDE - TABLETTE */
+
+  aside {
+    margin: auto;
+    width: 100%;
+    margin: 40px auto;
+  }
+
+  aside ul {
+    margin: auto;
+    width: 100%;
+  }
+
   /* ACTIVITIES MARSEILLE - TABLETTE */
+  .activities {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .activities li {
+    padding-top: 20px;
+  }
+
+  .activities ul li figure {
+    text-align: left;
+  }
+
+  .activities ul li figure .item-1 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-2 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-3 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-4 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-5 {
+    width: 100%;
+    height: 190px;
+  }
+
+  .activities ul li figure .item-6 {
+    width: 100%;
+    height: 190px;
+  }
 }
