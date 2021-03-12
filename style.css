@@ -194,7 +194,7 @@ button {
 
 .search-result {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 
 .fas.fa-info {
@@ -312,7 +312,7 @@ aside ul li figure figcaption {
 
 aside ul li img {
   min-height: 134px;
-  max-width: 126px;
+  width: 126px;
   object-fit: cover;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -358,6 +358,15 @@ aside ul li img {
 
 .activities-card:hover {
   transform: scale(1.1);
+}
+
+.activities ul {
+  width: 25%;
+}
+
+.activities ul li.activities-card a {
+  display: inline-block;
+  width: 100%;
 }
 
 .activities ul li figure {
@@ -454,6 +463,14 @@ footer {
       "logo . inscription"
       "nav nav nav";
     padding-bottom: 35px;
+  }
+
+  header img.logo {
+    padding-left: 10px;
+  }
+
+  header a.inscription {
+    padding-right: 10px;
   }
 
   .navigation {
@@ -560,9 +577,15 @@ footer {
   }
 
   /*  ACTIVITIES MARSEILLE - MOBILE*/
+
   .activities {
     display: flex;
     flex-direction: column;
+  }
+
+  .activities ul {
+    width: 90%;
+    display: inline-block;
   }
 
   .activities li {
@@ -676,6 +699,11 @@ footer {
   .activities {
     display: flex;
     flex-direction: column;
+  }
+
+  .activities ul {
+    width: 95%;
+    display: inline-block;
   }
 
   .activities li {
