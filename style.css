@@ -31,6 +31,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  color: var(--blue);
+}
+
 h1,
 h3,
 h4 {
@@ -39,6 +43,7 @@ h4 {
 
 h1 {
   margin-bottom: 15px;
+  padding-right: 20px;
   font-size: 1.4rem;
 }
 
@@ -103,6 +108,7 @@ nav {
 
 .cta {
   margin-left: 40px;
+  margin-bottom: -20px;
 }
 
 /* SEARCH */
@@ -240,7 +246,7 @@ figcaption p {
 
 .accommodations ul li figure {
   background: white;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 4px;
   line-height: 1.6rem;
   box-shadow: 0 0 10px #c1c1c1;
@@ -251,8 +257,8 @@ figcaption p {
   height: 114px;
   min-width: 238px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .accommodations-frame {
@@ -299,7 +305,7 @@ aside ul li figure {
   height: 145px;
   width: 100%;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 15px;
   padding: 4px 0 4px 4px;
   line-height: 1.6rem;
   box-shadow: 0 0 10px #c1c1c1;
@@ -314,8 +320,8 @@ aside ul li img {
   min-height: 134px;
   width: 126px;
   object-fit: cover;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .aside-populars-card {
@@ -339,6 +345,7 @@ aside ul li img {
 
 #activities {
   margin-left: 40px;
+  margin-top: 20px;
 }
 
 .activities ul {
@@ -385,48 +392,48 @@ aside ul li img {
 .activities ul li figure .item-1 {
   height: 390px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-2 {
   height: 180px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-3 {
   height: 110px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-4 {
   height: 390px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-5 {
   height: 155px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
 .activities ul li figure .item-6 {
   height: 155px;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   object-fit: cover;
 }
 
@@ -466,11 +473,11 @@ footer {
   }
 
   header img.logo {
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   header a.inscription {
-    padding-right: 10px;
+    padding-right: 20px;
   }
 
   .navigation {
@@ -486,6 +493,9 @@ footer {
   }
 
   /* SEARCH - MOBILE */
+  .cta {
+    margin-left: 20px;
+  }
 
   form {
     max-width: 92%;
@@ -544,7 +554,8 @@ footer {
   .accommodations {
     background-color: white;
     margin: auto;
-    max-width: 100%;
+    padding: 0;
+    width: 90%;
   }
 
   .accommodations ul {
@@ -555,14 +566,23 @@ footer {
   .accommodations ul li img {
     min-width: 100%;
   }
+
+  .afficher-plus {
+    margin: 40px 0 50px 0;
+  }
   /* ASIDE - MOBILE */
 
   aside {
-    margin: 40px auto;
-    width: 100%;
+    margin: 20px auto;
+    width: 96%;
     border-radius: 0;
     flex-direction: column;
   }
+
+  aside h3 {
+    margin: auto;
+  }
+
   aside ul {
     margin: auto;
     width: 100%;
@@ -573,10 +593,14 @@ footer {
   }
 
   .titles-accommodations-and-populars {
-    margin: 0 45px 0 0;
+    margin: 20px 35px 0 0;
   }
 
   /*  ACTIVITIES MARSEILLE - MOBILE*/
+
+  #activities {
+    margin-left: 20px;
+  }
 
   .activities {
     display: flex;
@@ -584,12 +608,12 @@ footer {
   }
 
   .activities ul {
-    width: 90%;
+    width: 94%;
     display: inline-block;
   }
 
   .activities li {
-    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .activities ul li figure {
@@ -630,6 +654,7 @@ footer {
   footer {
     display: flex;
     flex-flow: column;
+    margin-top: 30px;
   }
 
   .column {
