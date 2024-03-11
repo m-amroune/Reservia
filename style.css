@@ -352,6 +352,7 @@ aside ul li img {
   display: flex;
   justify-content: space-between;
   padding-right: 45px;
+  width: 25%;
 }
 
 .two-cards {
@@ -365,10 +366,6 @@ aside ul li img {
 
 .activities-card:hover {
   transform: scale(1.1);
-}
-
-.activities ul {
-  width: 25%;
 }
 
 .activities ul li.activities-card a {
@@ -596,7 +593,7 @@ footer {
     margin: 20px 35px 0 0;
   }
 
-  /*  ACTIVITIES MARSEILLE - MOBILE*/
+  /*  ACTIVITIES MARSEILLE - MOBILE */
 
   #activities {
     margin-left: 20px;
