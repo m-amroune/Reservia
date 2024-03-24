@@ -1,6 +1,11 @@
 # Reservia
 
-Projet 2 formation OpenClassrooms : Transformez une maquette en site web
+Projet formation OpenClassrooms : Transformez une maquette en site web
+
+## Skills
+
+- Integrate content according to a Figma mock-up
+- Implement a responsive interface
 
 ## Languages
 
